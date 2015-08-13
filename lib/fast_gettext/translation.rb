@@ -49,6 +49,12 @@ module FastGettext
       block ? block.call : key.split(separator||NAMESPACE_SEPARATOR).last
     end
 
+    # removes html from the transition
+    def strip_(key, &block)
+      translation = FastGettext.cached_find(key) or block ? block.call : key
+      translation.gsub(/<\/?[^>]*>/, "")
+    end
+
     #tell gettext: this string need translation (will be found during parsing)
     def N_(translate)
       translate
