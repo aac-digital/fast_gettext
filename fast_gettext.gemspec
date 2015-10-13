@@ -13,7 +13,7 @@ Gem::Specification.new name, FastGettext::VERSION do |s|
   s.add_development_dependency 'rake'
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'rspec'
-  s.add_development_dependency 'activerecord'
+  s.add_development_dependency 'activerecord', "~> 4.0"
   s.add_development_dependency 'i18n'
   s.add_development_dependency 'bump'
   s.add_development_dependency 'wwtd'
